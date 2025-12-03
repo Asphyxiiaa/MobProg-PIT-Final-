@@ -8,9 +8,9 @@ export const AuthProvider = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userRole, setUserRole] = useState(null); // 'Worker' or 'Employer'
   const [isVerified, setIsVerified] = useState(false);
-  const [isLoading, setIsLoading] = useState(true); // Splash Screen State
+  const [isLoading, setIsLoading] = useState(true);
 
-  // ✅ STATE MANAGEMENT: The 'Database' of jobs lives here
+  // The database of jobs resides here
   const [jobs, setJobs] = useState([
     { id: '1', title: 'Leaky Faucet Repair', category: 'Plumbing', pay: '₱500', postedBy: 'Employer A', location: 'Zone 1', time: '5 mins ago' },
     { id: '2', title: 'Tutor in Algebra', category: 'Tutoring', pay: '₱350/hr', postedBy: 'Employer B', location: 'Zone 3', time: '1 hr ago' },
