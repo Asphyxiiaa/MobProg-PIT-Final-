@@ -2,7 +2,7 @@ import React, { createContext, useState, useContext, useEffect } from 'react';
 
 // 1. Create the Context
 export const AuthContext = createContext();
-
+export const useAuth = () => useContext(AuthContext);
 // 2. Create the Provider Component
 export const AuthProvider = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -60,6 +60,3 @@ export const AuthProvider = ({ children }) => {
     </AuthContext.Provider>
   );
 };
-
-// 3. Custom Hook 
-export const useAuth = () => useContext(AuthContext);
